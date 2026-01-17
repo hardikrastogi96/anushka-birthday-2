@@ -1,380 +1,512 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Happy Birthday Anushka 💖</title>
 
   <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
       font-family: "Poppins", sans-serif;
     }
 
-    body{
-      min-height:100vh;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      padding:20px;
-      position:relative;
-      overflow-y:auto;
-      overflow-x:hidden;
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      position: relative;
+      overflow-y: auto;
+      overflow-x: hidden;
       background: radial-gradient(circle at top, #ffb3c6, #ff4d6d, #6a00ff);
     }
 
-    body::before{
-      content:"";
-      position:fixed;
-      inset:0;
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
       background-image:
-        radial-gradient(circle at 10px 10px, rgba(255,255,255,0.18) 6px, transparent 7px),
-        radial-gradient(circle at 30px 10px, rgba(255,255,255,0.18) 6px, transparent 7px),
-        radial-gradient(circle at 20px 22px, rgba(255,255,255,0.18) 6px, transparent 7px);
-      background-size:40px 40px;
-      opacity:0.35;
-      z-index:0;
-      pointer-events:none;
+        radial-gradient(circle at 10px 10px, rgba(255, 255, 255, 0.18) 6px, transparent 7px),
+        radial-gradient(circle at 30px 10px, rgba(255, 255, 255, 0.18) 6px, transparent 7px),
+        radial-gradient(circle at 20px 22px, rgba(255, 255, 255, 0.18) 6px, transparent 7px);
+      background-size: 40px 40px;
+      opacity: 0.35;
+      z-index: 0;
+      pointer-events: none;
     }
 
-    body::after{
-      content:"";
-      position:fixed;
-      inset:0;
-      background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.18), transparent 50%),
-                  radial-gradient(circle at 80% 70%, rgba(255,255,255,0.14), transparent 55%);
-      z-index:0;
-      pointer-events:none;
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.18), transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.14), transparent 55%);
+      z-index: 0;
+      pointer-events: none;
     }
 
     /* floating hearts */
-    .heart{
-      position:fixed;
-      width:18px;
-      height:18px;
-      background:rgba(255,255,255,0.85);
-      transform:rotate(45deg);
+    .heart {
+      position: fixed;
+      width: 18px;
+      height: 18px;
+      background: rgba(255, 255, 255, 0.85);
+      transform: rotate(45deg);
       animation: float 7s infinite ease-in-out;
-      opacity:0.75;
-      z-index:1;
-      pointer-events:none;
+      opacity: 0.75;
+      z-index: 1;
+      pointer-events: none;
     }
+
     .heart::before,
-    .heart::after{
-      content:"";
-      position:absolute;
-      width:18px;
-      height:18px;
-      background:rgba(255,255,255,0.85);
-      border-radius:50%;
-    }
-    .heart::before{top:-9px;left:0;}
-    .heart::after{left:-9px;top:0;}
-
-    @keyframes float{
-      0%{transform:translateY(110vh) rotate(45deg);opacity:0;}
-      40%{opacity:0.85;}
-      100%{transform:translateY(-20vh) rotate(45deg);opacity:0;}
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 50%;
     }
 
-    .card{
-      width:440px;
-      max-width:96%;
-      padding:26px 20px;
-      background:rgba(255,255,255,0.18);
-      border:1px solid rgba(255,255,255,0.25);
-      border-radius:26px;
-      backdrop-filter:blur(14px);
-      box-shadow:0 18px 55px rgba(0,0,0,0.25);
-      text-align:center;
-      position:relative;
-      z-index:2;
+    .heart::before {
+      top: -9px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -9px;
+      top: 0;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(110vh) rotate(45deg);
+        opacity: 0;
+      }
+
+      40% {
+        opacity: 0.85;
+      }
+
+      100% {
+        transform: translateY(-20vh) rotate(45deg);
+        opacity: 0;
+      }
+    }
+
+    .card {
+      width: 440px;
+      max-width: 96%;
+      padding: 26px 20px;
+      background: rgba(255, 255, 255, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 26px;
+      backdrop-filter: blur(14px);
+      box-shadow: 0 18px 55px rgba(0, 0, 0, 0.25);
+      text-align: center;
+      position: relative;
+      z-index: 2;
       animation: pop 1.1s ease;
     }
 
-    @keyframes pop{
-      0%{transform:scale(0.7);opacity:0;}
-      100%{transform:scale(1);opacity:1;}
+    @keyframes pop {
+      0% {
+        transform: scale(0.7);
+        opacity: 0;
+      }
+
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
     }
 
-    .tag{
-      display:inline-block;
-      padding:6px 12px;
-      border-radius:999px;
-      background:rgba(255,255,255,0.22);
-      color:#fff;
-      font-size:13px;
-      letter-spacing:0.3px;
-      margin-bottom:12px;
+    .tag {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.22);
+      color: #fff;
+      font-size: 13px;
+      letter-spacing: 0.3px;
+      margin-bottom: 12px;
     }
 
-    h1{
-      font-size:22px;
-      color:#fff;
-      margin-bottom:6px;
-      text-shadow:0 2px 14px rgba(0,0,0,0.25);
-      white-space:nowrap;
+    h1 {
+      font-size: 22px;
+      color: #fff;
+      margin-bottom: 6px;
+      text-shadow: 0 2px 14px rgba(0, 0, 0, 0.25);
+      white-space: nowrap;
     }
 
-    .typing{
-      font-size:18px;
-      color:rgba(255,255,255,0.95);
-      margin-bottom:14px;
-      min-height:28px;
-      font-weight:600;
+    .typing {
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.95);
+      margin-bottom: 14px;
+      min-height: 28px;
+      font-weight: 600;
     }
 
-    p{
-      color:rgba(255,255,255,0.95);
-      font-size:15px;
-      line-height:1.7;
-      margin-bottom:16px;
+    p {
+      color: rgba(255, 255, 255, 0.95);
+      font-size: 15px;
+      line-height: 1.7;
+      margin-bottom: 16px;
     }
 
-    .pulseLove{
-      display:inline-block;
-      font-size:16px;
-      font-weight:700;
-      margin-top:6px;
-      color:#fff;
+    .pulseLove {
+      display: inline-block;
+      font-size: 16px;
+      font-weight: 700;
+      margin-top: 6px;
+      color: #fff;
       animation: heartbeat 1.2s infinite;
-      text-shadow:0 2px 12px rgba(0,0,0,0.2);
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
     }
 
-    @keyframes heartbeat{
-      0%,100%{transform:scale(1);}
-      50%{transform:scale(1.12);}
+    @keyframes heartbeat {
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.12);
+      }
     }
 
     /* distance box */
-    .distanceBox{
-      margin-top:12px;
-      padding:14px 14px;
-      border-radius:18px;
-      background:rgba(255,255,255,0.12);
-      border:1px solid rgba(255,255,255,0.18);
-      color:#fff;
-      text-align:center;
-      animation:fadeIn 0.8s ease;
+    .distanceBox {
+      margin-top: 12px;
+      padding: 14px 14px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: #fff;
+      text-align: center;
+      animation: fadeIn 0.8s ease;
     }
 
-    .distanceBox h3{
-      font-size:15px;
-      margin-bottom:6px;
-      text-shadow:0 2px 12px rgba(0,0,0,0.2);
+    .distanceBox h3 {
+      font-size: 15px;
+      margin-bottom: 6px;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
     }
 
-    .distanceBox p{
-      margin:0;
-      font-size:14px;
-      line-height:1.6;
-      opacity:0.95;
+    .distanceBox p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.6;
+      opacity: 0.95;
     }
 
-    .btns{
-      display:flex;
-      gap:10px;
-      justify-content:center;
-      flex-wrap:wrap;
-      margin-top:10px;
+    .btns {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 10px;
     }
 
-    button{
-      padding:12px 18px;
-      border:none;
-      border-radius:14px;
-      background:#fff;
-      color:#ff2e63;
-      font-weight:700;
-      cursor:pointer;
-      transition:0.25s;
-      box-shadow:0 10px 20px rgba(0,0,0,0.2);
-      font-size:14px;
+    button {
+      padding: 12px 18px;
+      border: none;
+      border-radius: 14px;
+      background: #fff;
+      color: #ff2e63;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.25s;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      font-size: 14px;
     }
-    button:hover{
-      transform:translateY(-2px) scale(1.03);
-      background:#ff2e63;
-      color:#fff;
+
+    button:hover {
+      transform: translateY(-2px) scale(1.03);
+      background: #ff2e63;
+      color: #fff;
     }
 
     /* Promises box */
-    .surprise{
-      margin-top:14px;
-      display:none;
-      font-size:14.5px;
-      color:#fff;
-      font-weight:500;
-      line-height:1.8;
-      text-align:left;
-      background:rgba(255,255,255,0.12);
-      border:1px solid rgba(255,255,255,0.18);
-      border-radius:18px;
-      padding:14px 14px;
-      animation:fadeIn 0.8s ease;
-      max-height:260px;
-      overflow-y:auto;
+    .surprise {
+      margin-top: 14px;
+      display: none;
+      font-size: 14.5px;
+      color: #fff;
+      font-weight: 500;
+      line-height: 1.8;
+      text-align: left;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 18px;
+      padding: 14px 14px;
+      animation: fadeIn 0.8s ease;
+      max-height: 260px;
+      overflow-y: auto;
     }
 
-    .surprise b{ font-weight:800; }
+    .surprise b {
+      font-weight: 800;
+    }
 
-    @keyframes fadeIn{
-      from{opacity:0;transform:translateY(10px);}
-      to{opacity:1;transform:translateY(0);}
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     /* Reasons box */
-    .memoryBox{
-      margin-top:14px;
-      display:none;
-      background:rgba(255,255,255,0.12);
-      border:1px solid rgba(255,255,255,0.18);
-      border-radius:18px;
-      padding:14px;
-      color:#fff;
-      text-align:left;
-      animation:fadeIn 0.8s ease;
+    .memoryBox {
+      margin-top: 14px;
+      display: none;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 18px;
+      padding: 14px;
+      color: #fff;
+      text-align: left;
+      animation: fadeIn 0.8s ease;
     }
 
-    .memoryBox h3{
-      font-size:16px;
-      margin-bottom:8px;
-      text-align:center;
+    .memoryBox h3 {
+      font-size: 16px;
+      margin-bottom: 8px;
+      text-align: center;
     }
 
-    .memoryList{
-      display:grid;
-      gap:10px;
+    .memoryList {
+      display: grid;
+      gap: 10px;
     }
 
-    .memoryItem{
-      padding:10px 12px;
-      border-radius:14px;
-      background:rgba(255,255,255,0.12);
-      border:1px solid rgba(255,255,255,0.16);
-      font-size:14px;
-      line-height:1.6;
+    .memoryItem {
+      padding: 10px 12px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      font-size: 14px;
+      line-height: 1.6;
     }
 
     /* Letter button */
-    .letterBox{
-      margin-top:18px;
-      display:flex;
-      justify-content:center;
+    .letterBox {
+      margin-top: 18px;
+      display: flex;
+      justify-content: center;
     }
 
-    .letterBtn{
-      width:78px;
-      height:58px;
-      border-radius:16px;
-      border:1px solid rgba(255,255,255,0.25);
-      background:rgba(255,255,255,0.2);
-      cursor:pointer;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-size:28px;
-      transition:0.25s;
-      box-shadow:0 12px 25px rgba(0,0,0,0.18);
+    .letterBtn {
+      width: 78px;
+      height: 58px;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      background: rgba(255, 255, 255, 0.2);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      transition: 0.25s;
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
     }
 
-    .letterBtn:hover{
-      transform:scale(1.06);
-      background:rgba(255,255,255,0.28);
+    .letterBtn:hover {
+      transform: scale(1.06);
+      background: rgba(255, 255, 255, 0.28);
     }
 
     /* Modal */
-    .modal{
-      position:fixed;
-      top:0; left:0;
-      width:100%;
-      height:100%;
-      display:none;
-      align-items:center;
-      justify-content:center;
-      background:rgba(0,0,0,0.55);
-      z-index:999;
-      padding:18px;
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.55);
+      z-index: 999;
+      padding: 18px;
     }
 
-    .modalContent{
-      width:460px;
-      max-width:96%;
-      max-height:85vh;
-      overflow-y:auto;
-      background:rgba(255,255,255,0.18);
-      border:1px solid rgba(255,255,255,0.25);
-      backdrop-filter:blur(16px);
-      border-radius:24px;
-      padding:22px 18px;
-      box-shadow:0 18px 55px rgba(0,0,0,0.35);
-      color:#fff;
-      animation:pop 0.6s ease;
-      position:relative;
+    .modalContent {
+      width: 460px;
+      max-width: 96%;
+      max-height: 85vh;
+      overflow-y: auto;
+      background: rgba(255, 255, 255, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(16px);
+      border-radius: 24px;
+      padding: 22px 18px;
+      box-shadow: 0 18px 55px rgba(0, 0, 0, 0.35);
+      color: #fff;
+      animation: pop 0.6s ease;
+      position: relative;
     }
 
-    .modalContent h3{
-      font-size:20px;
-      margin-bottom:10px;
-      text-align:center;
-      text-shadow:0 2px 12px rgba(0,0,0,0.2);
+    .modalContent h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      text-align: center;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
     }
 
-    .letterText{
-      font-size:14.5px;
-      line-height:1.75;
-      opacity:0.95;
-      white-space:pre-line;
-      padding:8px 6px;
+    .letterText {
+      font-size: 14.5px;
+      line-height: 1.75;
+      opacity: 0.95;
+      white-space: pre-line;
+      padding: 8px 6px;
     }
 
-    .closeBtn{
-      margin-top:14px;
-      width:100%;
-      padding:12px;
-      border:none;
-      border-radius:14px;
-      background:#fff;
-      color:#6a00ff;
-      font-weight:800;
-      cursor:pointer;
-      transition:0.25s;
-    }
-    .closeBtn:hover{
-      background:#6a00ff;
-      color:#fff;
-      transform:scale(1.02);
+    .closeBtn {
+      margin-top: 14px;
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 14px;
+      background: #fff;
+      color: #6a00ff;
+      font-weight: 800;
+      cursor: pointer;
+      transition: 0.25s;
     }
 
-    .footer{
-      margin-top:16px;
-      font-size:12.5px;
-      color:rgba(255,255,255,0.9);
-      opacity:0.95;
+    .closeBtn:hover {
+      background: #6a00ff;
+      color: #fff;
+      transform: scale(1.02);
+    }
+
+    .footer {
+      margin-top: 16px;
+      font-size: 12.5px;
+      color: rgba(255, 255, 255, 0.9);
+      opacity: 0.95;
     }
 
     /* Falling flowers */
-    .flower{
-      position:fixed;
-      top:-20px;
-      font-size:22px;
-      z-index:9999;
-      pointer-events:none;
+    .flower {
+      position: fixed;
+      top: -20px;
+      font-size: 22px;
+      z-index: 9999;
+      pointer-events: none;
       animation: fall 5s linear forwards;
-      opacity:0.95;
+      opacity: 0.95;
     }
 
-    @keyframes fall{
-      to{
+    @keyframes fall {
+      to {
         transform: translateY(110vh) rotate(360deg);
-        opacity:0;
+        opacity: 0;
+      }
+    }
+
+    /* Entry Screen */
+    #entryScreen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at top, #ffb3c6, #ff4d6d, #6a00ff);
+      z-index: 10000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 1s ease, visibility 1s ease;
+    }
+
+    #entryScreen.hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .enterBtn {
+      padding: 15px 30px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.25);
+      border: 2px solid rgba(255, 255, 255, 0.4);
+      border-radius: 50px;
+      cursor: pointer;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      animation: pulseBtn 2s infinite;
+      transition: transform 0.3s;
+    }
+
+    .enterBtn:hover {
+      transform: scale(1.1);
+      background: rgba(255, 255, 255, 0.35);
+    }
+
+    .entryTitle {
+      font-family: 'Dancing Script', cursive;
+      font-size: 38px;
+      color: #fff;
+      margin-bottom: 10px;
+      font-weight: 700;
+      text-shadow: 0 0 10px rgba(255, 20, 147, 0.8), 0 0 20px rgba(255, 20, 147, 0.6);
+      animation: floatTitle 3s ease-in-out infinite;
+    }
+
+    @keyframes floatTitle {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-5px);
+      }
+    }
+
+    @keyframes pulseBtn {
+      0% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+      }
+
+      70% {
+        box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
       }
     }
   </style>
+  <!-- Google Fonts for stylish text -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 </head>
 
 <body>
+
+  <!-- Entry Screen -->
+  <div id="entryScreen">
+    <h2 class="entryTitle">Hey Birthday Girl</h2>
+    <button class="enterBtn" onclick="enterSurprise()">Tap for surprise 🎁</button>
+  </div>
 
   <!-- hearts -->
   <div class="heart" style="left:8%; animation-delay:0s;"></div>
@@ -417,26 +549,27 @@
 
     <!-- Promises (toggle open below buttons) -->
     <div class="surprise" id="surpriseMsg">
-      Anushka ❤️ today I just want to tell you something very honestly… you are the most precious part of my life and I’m truly grateful that you exist in my world.
+      Anushka ❤️ today I just want to tell you something very honestly… you are the most precious part of my life and
+      I’m truly grateful that you exist in my world.
       <br><br>
       On your birthday, I don’t want to give you just words, I want to give you my <b>promises</b> too.
       <br><br>
-      <b>1)</b> I promise to always respect you and your feelings.  
-      <br><b>2)</b> I promise to always support your dreams and goals.  
-      <br><b>3)</b> I promise to stand by you in your good days and your bad days.  
-      <br><b>4)</b> I promise to never give up on us, no matter what happens.  
-      <br><b>5)</b> I promise to always make you feel loved, safe, and valued.  
-      <br><b>6)</b> I promise to listen to you, not just hear you.  
-      <br><b>7)</b> I promise to make you smile even when life feels heavy.  
-      <br><b>8)</b> I promise to be honest with you and always choose loyalty.  
-      <br><b>9)</b> I promise to celebrate every little achievement of yours like it’s my own.  
-      <br><b>10)</b> I promise to love you more every day, in every version of life.  
+      <b>1)</b> I promise to always respect you and your feelings.
+      <br><b>2)</b> I promise to always support your dreams and goals.
+      <br><b>3)</b> I promise to stand by you in your good days and your bad days.
+      <br><b>4)</b> I promise to never give up on us, no matter what happens.
+      <br><b>5)</b> I promise to always make you feel loved, safe, and valued.
+      <br><b>6)</b> I promise to listen to you, not just hear you.
+      <br><b>7)</b> I promise to make you smile even when life feels heavy.
+      <br><b>8)</b> I promise to be honest with you and always choose loyalty.
+      <br><b>9)</b> I promise to celebrate every little achievement of yours like it’s my own.
+      <br><b>10)</b> I promise to love you more every day, in every version of life.
       <br><br>
       Happy Birthday my love 💖 You are my favorite blessing, and I’ll always be proud of you 🥺✨
       <br><br>
       <b>And even if we are far away right now…</b><br>
       <b>I still feel you in my heart every single day.</b><br>
-      I miss you a lot, but I’m proud of us —  
+      I miss you a lot, but I’m proud of us —
       because our love is strong enough to handle the distance ❤️
     </div>
 
@@ -446,7 +579,8 @@
 
       <div class="memoryList">
         <div class="memoryItem">🌙 Even in long distance… you feel closer to me than anyone else.</div>
-        <div class="memoryItem">🥺 I miss you in the smallest moments… when I want to tell you something and you're not here.</div>
+        <div class="memoryItem">🥺 I miss you in the smallest moments… when I want to tell you something and you're not
+          here.</div>
         <div class="memoryItem">❤️ Distance is hard, but losing you would be harder.</div>
         <div class="memoryItem">✨ Every night I miss you, I remind myself… you're worth it.</div>
         <div class="memoryItem">💖 No matter how far you are, you're always the closest person to my heart.</div>
@@ -474,33 +608,33 @@
       <h3>💌 A Letter For My Panda</h3>
 
       <div class="letterText">
-Happy Birthday My Love ❤️
+        Happy Birthday My Love ❤️
 
-Anushka, today I just want to tell you something from my heart…
+        Anushka, today I just want to tell you something from my heart…
 
-You are the most beautiful part of my life.
-Your smile feels like my favorite place,
-your voice feels like comfort,
-and your presence makes everything better.
+        You are the most beautiful part of my life.
+        Your smile feels like my favorite place,
+        your voice feels like comfort,
+        and your presence makes everything better.
 
-I may not be perfect, but one thing is always true —
-I will always choose you.
+        I may not be perfect, but one thing is always true —
+        I will always choose you.
 
-Even if we are far right now…
-I still feel you in my heart every single day.
-I miss you a lot, but I’m proud of us —
-because our love is strong enough to handle the distance.
+        Even if we are far right now…
+        I still feel you in my heart every single day.
+        I miss you a lot, but I’m proud of us —
+        because our love is strong enough to handle the distance.
 
-Thank you for being you.
-Thank you for your love, your care, your patience,
-and for making my life feel special every single day ✨
+        Thank you for being you.
+        Thank you for your love, your care, your patience,
+        and for making my life feel special every single day ✨
 
-I wish you a year full of happiness, success, and dreams coming true 🌙🌸
-And I promise… I’ll always be there to celebrate every moment with you.
+        I wish you a year full of happiness, success, and dreams coming true 🌙🌸
+        And I promise… I’ll always be there to celebrate every moment with you.
 
-I love you more than you know ❤️🥺
+        I love you more than you know ❤️🥺
 
-— Yours 💖
+        — Yours 💖
       </div>
 
       <button class="closeBtn" onclick="closeLetter()">Close Letter ✨</button>
@@ -525,18 +659,18 @@ I love you more than you know ❤️🥺
     let isDeleting = false;
     const typingEl = document.getElementById("typingText");
 
-    function typeEffect(){
+    function typeEffect() {
       const currentLine = typingLines[lineIndex];
-      if(!isDeleting){
+      if (!isDeleting) {
         typingEl.textContent = currentLine.substring(0, charIndex++);
-        if(charIndex > currentLine.length){
+        if (charIndex > currentLine.length) {
           isDeleting = true;
           setTimeout(typeEffect, 900);
           return;
         }
       } else {
         typingEl.textContent = currentLine.substring(0, charIndex--);
-        if(charIndex < 0){
+        if (charIndex < 0) {
           isDeleting = false;
           lineIndex = (lineIndex + 1) % typingLines.length;
           charIndex = 0;
@@ -547,7 +681,7 @@ I love you more than you know ❤️🥺
     typeEffect();
 
     // Toggle Promises (open below buttons)
-    function togglePromises(){
+    function togglePromises() {
       const p = document.getElementById("surpriseMsg");
       const m = document.getElementById("memoryBox");
 
@@ -555,15 +689,15 @@ I love you more than you know ❤️🥺
       m.style.display = "none";
 
       // toggle promises
-      if(p.style.display === "block"){
+      if (p.style.display === "block") {
         p.style.display = "none";
-      }else{
+      } else {
         p.style.display = "block";
       }
     }
 
     // Toggle Reasons (open below buttons)
-    function toggleMemories(){
+    function toggleMemories() {
       const m = document.getElementById("memoryBox");
       const p = document.getElementById("surpriseMsg");
 
@@ -571,24 +705,24 @@ I love you more than you know ❤️🥺
       p.style.display = "none";
 
       // toggle reasons
-      if(m.style.display === "block"){
+      if (m.style.display === "block") {
         m.style.display = "none";
-      }else{
+      } else {
         m.style.display = "block";
       }
     }
 
     // Letter open/close
-    function openLetter(){
+    function openLetter() {
       document.getElementById("letterModal").style.display = "flex";
     }
 
-    function closeLetter(){
+    function closeLetter() {
       document.getElementById("letterModal").style.display = "none";
     }
 
-    document.getElementById("letterModal").addEventListener("click", function(e){
-      if(e.target.id === "letterModal"){
+    document.getElementById("letterModal").addEventListener("click", function (e) {
+      if (e.target.id === "letterModal") {
         closeLetter();
       }
     });
@@ -597,59 +731,77 @@ I love you more than you know ❤️🥺
     let flowerInterval = null;
     let flowersOn = false;
 
-    function toggleFlowers(){
+    function toggleFlowers() {
       flowersOn = !flowersOn;
 
-      if(flowersOn){
+      if (flowersOn) {
         startFlowers();
-      }else{
+      } else {
         stopFlowers();
       }
     }
 
-    function startFlowers(){
-      if(flowerInterval) return;
-      flowerInterval = setInterval(()=> createFlower(), 240);
+    function startFlowers() {
+      if (flowerInterval) return;
+      flowerInterval = setInterval(() => createFlower(), 240);
     }
 
-    function stopFlowers(){
+    function stopFlowers() {
       clearInterval(flowerInterval);
       flowerInterval = null;
     }
 
-    function createFlower(){
-      const flowers = ["🌸","🌼","🌺","💮","🌷","✨"];
+    function createFlower() {
+      const flowers = ["🌸", "🌼", "🌺", "💮", "🌷", "✨"];
       const flower = document.createElement("div");
       flower.className = "flower";
-      flower.innerText = flowers[Math.floor(Math.random()*flowers.length)];
-      flower.style.left = Math.random()*100 + "vw";
-      flower.style.fontSize = (18 + Math.random()*18) + "px";
+      flower.innerText = flowers[Math.floor(Math.random() * flowers.length)];
+      flower.style.left = Math.random() * 100 + "vw";
+      flower.style.fontSize = (18 + Math.random() * 18) + "px";
       document.body.appendChild(flower);
-      setTimeout(()=> flower.remove(), 5200);
+      setTimeout(() => flower.remove(), 5200);
     }
 
     // 🎶 MUSIC Play / Pause
     let musicPlaying = false;
 
-    function toggleMusic(){
+    function toggleMusic() {
       const music = document.getElementById("bgMusic");
       const btn = document.getElementById("musicBtn");
 
-      if(!musicPlaying){
-        music.play().then(()=>{
+      if (!musicPlaying) {
+        music.play().then(() => {
           musicPlaying = true;
           btn.innerText = "Pause Music ⏸️";
-        }).catch((err)=>{
+        }).catch((err) => {
           alert("Music not playing ❌ Check file path: assets/my_song.mp3");
           console.log(err);
         });
-      }else{
+      } else {
         music.pause();
         musicPlaying = false;
         btn.innerText = "Play Music 🎶";
       }
     }
+
+    // Entry Screen Logic
+    function enterSurprise() {
+      const screen = document.getElementById("entryScreen");
+      screen.classList.add("hidden");
+
+      // Start Music
+      const music = document.getElementById("bgMusic");
+      music.play().then(() => {
+        musicPlaying = true;
+        document.getElementById("musicBtn").innerText = "Pause Music ⏸️";
+      }).catch(e => console.log("Audio play failed:", e));
+
+      // Trigger some flowers for effect
+      startFlowers();
+      setTimeout(stopFlowers, 4000); // stop after 4 seconds
+    }
   </script>
 
 </body>
+
 </html>
